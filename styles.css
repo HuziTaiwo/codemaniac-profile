@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+h2 i {
+  padding-left: 7px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+.scroll {
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #242943;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 2%;
+  right: 3%;
+  transition: 0.5s ease-in-out;
+}
+
+.scroll:hover {
+  background: #242943;
+  color: #fff;
+  transform: translateY(-15px);
+}
+
+/* --------------- ABOUT ME -------------- */
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+nav {
+  background: #eee;
+  padding: 10px 30px;
+  display: flex;
+  border-bottom: 1px solid #242943;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  background: #242943;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #eee;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border: 1px solid;
+  transition: 0.5s linear;
+  position: relative;
+}
+
+nav a:hover {
+  background: #eee;
+  color: #242943;
+}
+
+nav p {
+  position: absolute;
+  right: -10px;
+  bottom: 0px;
+  color: #242943;
+  font-size: 0.7rem;
+  z-index: 2;
+  background: #fff;
+  padding: 5px;
+  border-radius: 2px;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#profile {
+  background: #242943;
+  color: #fff;
+  padding: 30px;
+  position: relative;
+}
+
+.about {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px 20px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.about span {
+  color: teal;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.about small {
+  color: teal;
+  font-size: 1.1rem;
+}
+
+/*END*/
+
+/* --------------- SKILLS SECTION -------------- */
+
+#skills {
+  background: #f1f1f1;
+  padding: 30px 30px 100px;
+  position: relative;
+}
+.skills {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.skills h3 {
+  margin: 20px 0;
+}
+
+.skills p {
+  margin: 16px 0;
+  line-height: 1.8;
+}
+
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 50px;
+  position: relative;
+}
+
+.skills-content > div {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  justify-items: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.skills-content i {
+  font-size: 30px;
+  color: #242943;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/*END*/
+
+/* --------------- PROJECTS SECTION -------------- */
+
+#projects {
+  background: #eee;
+  padding: 30px 30px 100px;
+  position: relative;
+}
+
+#projects img {
+  width: 100%;
+}
+
+.cards {
+  background: #eee;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
+aside {
+  padding: 10px 15px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-body {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+  }
+}
+/*END*/
+
+/* --------------- CONTACT ME -------------- */
+#contact {
+  background: #242943;
+  color: #fff;
+  padding: 30px;
+}
+
+#contact h3 {
+  max-width: 600px;
+}
+
+form {
+  padding: 50px;
+}
+
+form input {
+  width: 100%;
+  max-width: 600px;
+  height: 40px;
+  padding: 0 8px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form textarea {
+  width: 100%;
+  display: block;
+  max-width: 600px;
+  padding: 8px;
+}
+
+form input[type="submit"] {
+  background: teal;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+  background: rgb(4, 95, 95);
+}
+
+#social a {
+  text-decoration: none;
+  color: #242943;
+  background: #eee;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  transition: 0.5s linear;
+  border: 2px solid;
+}
+
+#social a:hover {
+  background: #242943;
+  color: #eee;
+  transform: translateY(-5px);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.social-icon {
+  display: flex;
+}
+
+@media (max-width: 576px) {
+  form {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+
+  .scroll {
+    bottom: 0;
+  }
+}
+
+/* --------------- SHOW MESSAGE -------------- */
+.show-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #242943;
+  color: #eee;
+  display: none;
+}
+
+.message {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 30px 25px 10px 25px;
+  background: #fff;
+  color: #242943;
+}
+
+.message p {
+  padding-top: 20px;
+}
+
+.message button {
+  padding: 8px 10px;
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  color: crimson;
+  cursor: pointer;
+  animation: beat 0.5s linear alternate infinite;
+}
+
+.message .smile {
+  color: #242943;
+}
+
+.back-wrap {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.back,
+.to-top {
+  background: #eee;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #242943;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  transition: 0.5s linear;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.back:hover,
+.to-top:hover {
+  border-color: #eee;
+  background: #242943;
+  color: #eee;
+}
+
+.to-top {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* --------------- JS STYLES -------------- */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s linear;
+}
+
+section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav p.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+/* --------------- ANIMATIONS -------------- */
+@keyframes wiggle {
+  0% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes beat {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.4);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* --------------- MOBILE VIEW -------------- */
+@media (max-width: 320px) {
+  h2,
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .scroll {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  nav a {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    border-radius: 7px;
+  }
+
+  nav p {
+    font-size: 0.5rem;
+    padding: 2px 3px;
+  }
+
+  #profile {
+    padding: 15px;
+  }
+
+  .about {
+    padding: 15px 10px;
+  }
+
+  .about p {
+    font-size: 0.9rem;
+  }
+
+  .about span,
+  .about small {
+    font-size: 1rem;
+  }
+
+  #skills {
+    padding: 10px 10px 30px;
+  }
+
+  .skills-content {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-content i {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    top: -15px;
+    font-size: 22px;
+  }
+
+  #projects {
+    padding: 10px 10px 60px;
+  }
+
+  textarea,
+  input {
+    border-radius: 5px;
+    border: none;
+  }
+
+  #social a {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+
+  .to-top {
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+  }
+}
