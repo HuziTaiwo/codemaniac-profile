@@ -483,7 +483,8 @@ nav p.active {
     font-size: 1rem;
   }
 
-  nav a {
+  nav a,
+  #social a {
     width: 32px;
     height: 30px;
     font-size: 1rem;
@@ -536,13 +537,6 @@ nav p.active {
   input {
     border-radius: 5px;
     border: none;
-  }
-
-  #social a {
-    width: 25px;
-    height: 25px;
-    border-radius: 5px;
-    font-size: 0.8rem;
   }
 
   .to-top {
