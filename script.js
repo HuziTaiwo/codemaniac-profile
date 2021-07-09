@@ -2,6 +2,9 @@
 const sections = document.querySelectorAll("section");
 const skills = document.querySelectorAll(".skills-content > div");
 const cards = document.querySelectorAll(".cards");
+const projects = document.querySelectorAll('.project');
+const projectImages = document.querySelectorAll('.project img');
+const projectDetails = document.querySelectorAll('.project .details');
 const showMessage = document.querySelector(".show-message");
 const messageHeart = showMessage.querySelector("button");
 const form = document.querySelector("#message-me");
@@ -32,7 +35,38 @@ window.addEventListener("scroll", () => {
       });
     }
   });
+
+  projects.forEach(project => {
+    const projectPostion = project.getBoundingClientRect().top;
+    const screenPosition = innerHeight / 1.2;
+
+    if (projectPostion < screenPosition) {
+      project.classList.add('active');
+    }
+  });
+
 });
+
+// projects hover effect to show details
+projectDetails.forEach((detail, i) => {
+
+  detail.addEventListener('mouseenter', (e) => {
+      const projectImg = e.target.previousElementSibling;
+      projectImg.classList.add('scale');
+      detail.classList.add('hover');
+  });
+
+  detail.addEventListener('mouseleave', (e) => {
+      const projectImg = e.target.previousElementSibling;
+      projectImg.classList.remove('scale');
+      detail.classList.remove('hover');
+  });
+
+});
+
+// projectImages.forEach((img, i) => {
+//   console.log(img, i);
+// });
 
 // tooltip
 const tooltips = ["profile", "skills", "projects", "contact", "social"];
@@ -57,21 +91,21 @@ const tooltipFunc = () => {
 tooltipFunc();
 
 // Form Interaction
-form.addEventListener("submit", messageAlert);
+// form.addEventListener("submit", messageAlert);
 
-function messageAlert(e) {
-  e.preventDefault();
-  showMessage.style.display = "flex";
-}
+// function messageAlert(e) {
+//   e.preventDefault();
+//   showMessage.style.display = "flex";
+// }
 
 // heart the work
-messageHeart.addEventListener("click", messageReview);
+// messageHeart.addEventListener("click", messageReview);
 
-function messageReview() {
-  messageHeart.classList.add("fas");
-  messageHeart.style.animation = "";
-  output.textContent = "Thanks for the support";
-}
+// function messageReview() {
+//   messageHeart.classList.add("fas");
+//   messageHeart.style.animation = "";
+//   output.textContent = "Thanks for the support";
+// }
 
 // scroll to top
 arrowUp.addEventListener("click", toTop);
