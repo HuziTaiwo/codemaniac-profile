@@ -269,7 +269,7 @@ nav p {
 .project {
   opacity: 0;
   transform: translateY(50%);
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in;
 }
 
 .project.active {
@@ -283,7 +283,7 @@ nav p {
 }
 
 @media (max-width: 799px) {
-  #projects {
+  .projects {
     padding: 10px;
     grid-template-columns: 1fr;
   }
@@ -339,6 +339,10 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
   background: rgb(4, 95, 95);
+}
+
+#social {
+  margin-top: 15px;
 }
 
 #social a {
