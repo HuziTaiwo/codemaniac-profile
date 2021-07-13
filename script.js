@@ -17,7 +17,7 @@ const navigationLinks = navigation.querySelectorAll("a");
 window.addEventListener("scroll", () => {
   sections.forEach((section) => {
     const contentPosition = section.getBoundingClientRect().top;
-    const screenPosition = innerHeight;
+    const screenPosition = innerHeight/1.2;
 
     if (contentPosition < screenPosition) {
       section.classList.add("active");
