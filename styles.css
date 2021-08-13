@@ -138,6 +138,15 @@ nav p {
   color: teal;
   font-size: 1.1rem;
 }
+.download {
+  background: teal;
+  padding: 10px 15px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 10px;
+  display: inline-block;
+}
 
 /*END*/
 
