@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +13,6 @@
 
 body {
   position: relative;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 h2 {
@@ -205,6 +205,7 @@ nav p {
 #projects {
   background: #fff;
   padding: 30px 50px;
+  position: relative;
 }
 
 .projects {
@@ -288,7 +289,6 @@ nav p {
     grid-template-columns: 1fr;
   }
 }
-
 
 /*END*/
 
@@ -460,18 +460,18 @@ form input[type="submit"]:hover {
 }
 
 /* --------------- JS STYLES -------------- */
-section {
+/* section div {
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-100%);
-  transition: 0.6s linear;
+  transform: translateY(30%);
+  transition: 0.6s ease-in-out;
 }
 
-section.active {
+section div.active {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
-}
+} */
 
 nav p.active {
   pointer-events: all;
@@ -500,14 +500,14 @@ nav p.active {
   }
 }
 
-@keyframes fade {
+/* @keyframes fade {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
   }
-}
+} */
 
 /* --------------- MOBILE VIEW -------------- */
 @media (max-width: 375px) {
